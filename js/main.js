@@ -61,8 +61,8 @@ function handleResize(evt) {
 	// Math.min -> show all (with borders)
 	// There are other options too :)
 	scale = Math.min(canvas.width, canvas.height) / SIZE;
-	controller.width = width / scale;
-	controller.height = height / scale;
+	controller.width = pixelRatio * width / scale;
+	controller.height = pixelRatio * height / scale;
 
 	render();
 }
